@@ -1,5 +1,4 @@
 body {
-  width: 100%;
   font-family: 'DM Sans Regular';
   background-color: #F2F2F2;
 }
@@ -15,7 +14,7 @@ body {
   padding: 0 16px;
 }
 
-.page {
+.banner {
   background: linear-gradient(249.78deg, #35D3FF -0.64%, #A963FB 103.6%);
   margin-bottom: 70px;
 }
@@ -37,8 +36,30 @@ body {
   opacity: 0.3;
 }
 
+.button-start:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 210%;
+  height: 107%;
+  background: linear-gradient(to right, rgba(59, 136, 183, 1) 0%,rgba(59, 136, 183, 0) 50%,rgba(255, 255, 255, 0) 50%,rgb(255, 255, 255, 0) 100%);
+  transition: left .4s;
+}
 
-.home {
+.button-start:hover:before{
+  left: 0;
+}
+
+.img {
+  display: block;
+}
+
+.main-image {
+  margin: 0 auto;
+}
+
+.logo {
   display: flex;
   align-items: center;
 }
@@ -62,13 +83,32 @@ body {
   white-space: nowrap;
 }
 
-.menu__item {
+.menu__item:not(:last-child) {
   margin-right: 32px;
 }
 
 .menu__link {
   color: white;
   text-decoration: none;
+  position: relative;
+}
+
+
+.menu__link::before {
+	content: '';
+	position: absolute;
+	left: 0; bottom: -5px;
+	width: 0;
+	height: 1.5px;
+	background-color: white;
+}
+
+.menu__link:hover:before {
+	width: 100%;
+}
+
+.menu__link::before {
+	transition: width 0.35s;
 }
 
 .button-start {
@@ -80,6 +120,9 @@ body {
   border-radius: 60px;
   background: #FFFFFF;
   text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;  
 }
 
 .burger-btn {
@@ -110,7 +153,7 @@ body {
 	transition: all 0.5s;
 }
 
-.content__slogan {
+.banner__content-slogan {
   margin-top: 104px;
   display: flex;
   flex-direction: column;
@@ -137,16 +180,16 @@ body {
   margin-bottom: 41px;
 }
 
-.page__image {
+.banner__image {
   text-align: center;
 }
 
-.page__image img {
+.banner__image img {
   max-width: 100%;
   height: auto;
 }
 
-.features__content {
+.features {
   margin-bottom: 185px;
 }
 
@@ -186,17 +229,13 @@ body {
   }
 } 
 
-.card__item {
-  align-self: center;
-  justify-self: center;
-}
-
 .card {
-  height: 355px;
+  min-height: 355px;
   background: #FFFFFF;
   box-shadow: 0px 20px 50px rgba(59, 62, 67, 0.05);
   border-radius: 15px;
   padding: 50px 40px;
+  height: 100%;
 }
 
 .card__logo {
@@ -300,7 +339,10 @@ body {
   box-shadow: 0px 20px 50px rgba(188, 197, 212, 0.05);
   border-radius: 15px;
   display: flex;
-  margin: 20px 0;
+}
+
+.analytic__card:not(:last-child) {
+  margin-bottom: 40px;
 }
 
 .analytic__img {
@@ -312,6 +354,10 @@ body {
   display: flex;
   padding: 0 32px;
   align-items: center;
+}
+
+.details__content {
+  padding: 30px;
 }
 
 .process__cards {
@@ -395,9 +441,12 @@ body {
 .start__content {
   display: flex;
   flex-direction: row;
-  padding: 155px 0;
   align-items: center;
   justify-content: space-between;
+}
+
+.start {
+  padding: 155px 0;
 }
 
 .start__subtitle {
@@ -431,6 +480,7 @@ body {
 .content__text {
   display: flex;
   flex-direction: column;
+  align-items: start;
 }
 
 @media (max-width: 1202px) {
@@ -454,8 +504,32 @@ body {
     margin-right: 0px;
   }
 
-  .home {
+  .logo {
     flex-direction: column;
+  }
+
+  .header__main .button-start {
+    min-width: 164px;
+    min-height: 48px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 60px;
+  }
+
+  .header {
+    padding: 30px;
+  }
+
+  .menu__item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  .header__logo .logo__img {
+    height: 48px;
+  }
+
+  .header__logo .logo__name {
+    font-size: 18px;
   }
 }
 
@@ -484,6 +558,22 @@ body {
   .brands__list {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .features {
+    margin-bottom: 120px;
+  }
+
+  .process__content {
+    padding: 120px 0;
+  }
+
+  .brands {
+    padding: 120px 0;
+  }
+
+  .start {
+    padding: 120px 0;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -503,7 +593,7 @@ body {
     display: none;
   }
 
-  .home {
+  .logo {
     flex-direction: row;
   }
 
@@ -565,10 +655,6 @@ body {
     text-align: center;
   }
 
-  .menu__item {
-    margin-right: 0px;
-  }
-
   .terms {
     flex-direction: column;
     gap: 2rem;
@@ -592,6 +678,22 @@ body {
 
   .start__desc {
     font-size: 16px;
+  }
+
+  .features {
+    margin-bottom: 85px;
+  }
+
+  .process__content {
+    padding: 85px 0;
+  }
+
+  .brands {
+    padding: 85px 0;
+  }
+
+  .start {
+    padding: 85px 0;
   }
 }
 

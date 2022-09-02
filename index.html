@@ -12,24 +12,26 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    <div class="page">
+  <main class="wrapper">
+    <section class="banner">
       <header class="header">
         <div class="header__main">
-          <div class="header__home home">
-            <img class="logo" src="img/logo/logo.svg" alt="logo">
+          <div class="header__logo logo">
+            <img class="logo__img" src="img/logo/logo.svg" alt="logo">
             <div class="logo__name home-logo__name">Company</div>
           </div>
-          <ul class="header__menu menu">
-            <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Your benefits</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Our process</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Our works</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Testimonials</a></li>
-            <li class="menu__item"><a class="menu__link" href="#">Start a project</a></li>
-          </ul>
-          <button class="button-start">Get started</button>
-          <button class="burger-btn">
+          <nav>
+            <ul class="header__menu menu">
+              <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Your benefits</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Our process</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Our works</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Testimonials</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Start a project</a></li>
+            </ul>
+          </nav>
+          <button type="button" class="button-start">Get started</button>
+          <button type="menu" class="burger-btn">
             <span></span>
             <span></span>
             <span></span>
@@ -46,19 +48,19 @@
           </ul>
         </div>
       </header>
-      <div class="page__content">
-        <div class="content__slogan slogan container">
-          <h1 class="slogan__title slogan-item">A Digital Product Design Agency</h1>
-          <div class="slogan__desc slogan-item">We are Creative and Professional Digital Agency</div>
-          <button class="button-start slogan-item">Get started</button>
+      <div class="banner__content">
+        <div class="banner__content-slogan slogan container">
+          <h1 class="slogan__title">A Digital Product Design Agency</h1>
+          <div class="slogan__desc">We are Creative and Professional Digital Agency</div>
+          <button type="button" class="button-start">Get started</button>
         </div>
-        <div class="page__image">
-          <img src="img/main.png" alt="">
+        <div class="banner__image">
+          <img class="main-image img" src="img/main.png" alt="">
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="features">
+    <section class="features">
       <div class="features__content container">
         <div class="page-title features__subtitle">features</div>
         <h2 class="features__title">We are here to help you with</h2>
@@ -83,8 +85,8 @@
             <div class="card__logo logo3">
             </div>
             <div class="card__title">Handle by Expert</div>
-            <div class="card__desc">We know how we candevelop deep, trust-based relationships with our clients, and work
-              together more collaboratively</div>
+            <div class="card__desc">We know how we candevelop deep, trust-based relationships with our clients, and
+              work together more collaboratively</div>
           </div>
           <div class="card__item card">
             <div class="card__logo logo4">
@@ -109,9 +111,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="process">
+    <section class="process">
       <div class="process__content container">
         <div class="page-title process__subtitle">how it works</div>
         <h2 class="process__title">Our Process</h2>
@@ -119,46 +121,58 @@
           all business problems</div>
         <div class="process__cards analytic-cards">
           <div class="analytic__card">
-            <img class="analytic__img" src="img/process/card1/charts1.png" alt="">
+            <img class="analytic__img img" src="img/process/card1/charts1.png" alt="">
             <div class="analytic__details">
               <div class="details__content">
                 <div class="card__logo process-logo1">
                 </div>
                 <div class="card__title">Business Audit</div>
-                <div class="card__desc">An audit examines your business's financial records to verify they are accurate.
+                <div class="card__desc">An audit examines your business's financial records to verify they are
+                  accurate.
                   This is done through a systematic review of your transactions. </div>
               </div>
             </div>
           </div>
           <div class="analytic__card">
-            <img class="analytic__img" src="img/process/card2/charts2.png" alt="">
+            <div class="analytic__img">
+              <img class="img" src="img/process/card2/charts2.png" alt="">
+            </div>
             <div class="analytic__details">
               <div class="details__content">
                 <div class="card__logo process-logo2">
                 </div>
                 <div class="card__title">Data tracking</div>
                 <div class="card__desc">The hardware and software, which when used together allows you to know where
+                  something is at any point in timeThe hardware and software, which when used together allows you to know where
+                  something is at any point in timeThe hardware and software, which when used together allows you to know where
+                  something is at any point in timeThe hardware and software, which when used together allows you to know where
+                  something is at any point in timeThe hardware and software, which when used together allows you to know where
+                  something is at any point in timeThe hardware and software, which when used together allows you to know where
+                  something is at any point in timeThe hardware and software, which when used together allows you to know where
+                  something is at any point in timeThe hardware and software, which when used together allows you to know where
+                  something is at any point in timeThe hardware and software, which when used together allows you to know where
                   something is at any point in time</div>
               </div>
             </div>
           </div>
           <div class="analytic__card">
-            <img class="analytic__img" src="img/process/card3/charts3.png" alt="">
+            <img class="analytic__img img" src="img/process/card3/charts3.png" alt="">
             <div class="analytic__details">
               <div class="details__content">
                 <div class="card__logo process-logo3">
                 </div>
                 <div class="card__title">Results</div>
-                <div class="card__desc">An audit examines your business's financial records to verify they are accurate.
+                <div class="card__desc">An audit examines your business's financial records to verify they are
+                  accurate.
                   This is done through a systematic review of your transactions. </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="brands">
+    <section class="brands">
       <div class="brands__content container">
         <div class="page-title brands__subtitle">BRANDS</div>
         <h2 class="brands__title">We work with thousands of the worlds leading brands</h2>
@@ -176,26 +190,26 @@
         </div>
         <div class="brands__desc">You're going to be in good company. We work with world's leading brands.</div>
       </div>
-    </div>
+    </section>
 
-    <div class="start">
+    <section class="start">
       <div class="start__content container">
         <div class="content__text content">
           <div class="page-title start__subtitle">start with us</div>
           <h2 class="start__title">Start working faster today</h2>
           <div class="start__desc">We know the best solution for all of your business ideas and we can help you solve
             all business problems</div>
-          <button class="button-start start__button">Get started</button>
+          <button type="button" class="button-start start__button">Get started</button>
         </div>
-        <img class="start-img" src="img/start/img.png" alt="">
+        <img class="start-img img" src="img/start/img.png" alt="">
       </div>
-    </div>
+    </section>
 
     <footer class="footer">
       <div class="footer__content container">
         <div class="footer__menu">
-          <div class="footer__home home">
-            <img class="logo" src="img/footer/mini-logo.svg" alt="logo">
+          <div class="footer__logo logo">
+            <img class="logo__img" src="img/footer/mini-logo.svg" alt="logo">
             <div class="logo__name footer-logo__name">Company</div>
           </div>
           <ul class="menu">
@@ -227,7 +241,7 @@
         </div>
       </div>
     </footer>
-  </div>
+  </main>
 
   <script src="script.js"></script>
 </body>
